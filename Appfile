@@ -1,0 +1,22 @@
+application {
+  name = "o.gettingstarted"
+  type = "ruby"
+
+  dependency {
+    source = "../otto/examples/mongodb/"
+  }
+}
+
+project {
+  name = "o.gettingstarted"
+  infrastructure = "o.gettingstarted"
+}
+
+infrastructure "o.gettingstarted" {
+  type = "aws"
+  flavor = "simple"
+}
+
+customization "ruby" {
+  ruby_version = "2.1"
+}
